@@ -11,25 +11,9 @@ An unsupervised machine learning system that analyzes Netflix's content catalog 
 
 ---
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Problem Statement](#problem-statement)
-- [Features](#features)
-- [Methodology](#methodology)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Results](#results)
-- [Technologies Used](#technologies-used)
-- [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
----
-
 ## 🎯 Overview
+
+<img width="1919" height="1006" alt="Screenshot 2026-02-07 183407" src="https://github.com/user-attachments/assets/c17945c1-63ed-46ef-89ac-3ac6eb430983" />
 
 Netflix hosts over 7,000 movies and TV shows across multiple countries, languages, and genres. This abundance creates **choice paralysis** - users struggle to decide what to watch. Traditional metadata-based categorization (e.g., Comedy, Romance, Action) is too coarse-grained and fails to capture cultural and semantic nuances.
 
@@ -152,7 +136,7 @@ def recommend(title, df, vectors, top_n=7):
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/yourusername/netflix-clustering.git
+git clone https://github.com/yourusername/netflix-Content-Recommender.git
 cd netflix-clustering
 ```
 
@@ -224,11 +208,10 @@ print(recommendations)
 ```
 netflix-clustering/
 │
-├── Ediglobe_Final_Project.ipynb   # Main Jupyter notebook with analysis
+├── Project_Notebook.ipynb   # Main Jupyter notebook with analysis
 ├── app.py                          # Streamlit web application
 ├── requirements.txt                # Python dependencies
 ├── README.md                       # Project documentation
-├── IMPROVEMENTS.md                 # Detailed improvement suggestions
 │
 ├── data/
 │   └── NetflixSimple.csv          # Netflix dataset (not included)
@@ -237,20 +220,6 @@ netflix-clustering/
 │   ├── df.pkl                     # Processed dataframe
 │   ├── X_reduced.npy              # TF-IDF reduced features
 │   └── embeddings.npy             # Sentence transformer embeddings
-│
-├── notebooks/
-│   └── exploratory_analysis.ipynb # Additional EDA
-│
-├── src/
-│   ├── preprocessing.py           # Data preprocessing utilities
-│   ├── clustering.py              # Clustering algorithms
-│   ├── recommendation.py          # Recommendation engine
-│   └── evaluation.py              # Model evaluation metrics
-│
-└── images/
-    ├── cluster_visualization.png
-    ├── content_distribution.png
-    └── recommendation_demo.png
 ```
 
 ---
@@ -261,22 +230,20 @@ netflix-clustering/
 
 | Model | Silhouette Score | Davies-Bouldin Index | Calinski-Harabasz Index | Clusters |
 |-------|-----------------|---------------------|------------------------|----------|
-| K-Means (TF-IDF) | 0.XX | X.XX | XXX.XX | 20 |
-| HDBSCAN (Embeddings) | 0.XX | X.XX | XXX.XX | Auto |
-| Leiden (Graph-based) | 0.XX | X.XX | XXX.XX | Auto |
-
-*Note: Fill in with actual values from your notebook*
+| KMeans (TF-IDF)  |  0.024593    |    2.791513     |    108.444041      |      30 |
+| HDBSCAN (Embeddings) |  -0.008195    |    1.808984      |    32.756996       |      2|
+| Leiden (Graph-based) |  0.024593     |   4.954304      |    83.350914      |      12|
 
 ### Sample Recommendations
 
 **Input:** "3 Idiots"
 
 **Output:**
-1. PK (Movie, Comedy)
-2. Rang De Basanti (Movie, Drama)
-3. Taare Zameen Par (Movie, Drama)
-4. Dangal (Movie, Sports Drama)
-5. Like Stars on Earth (Movie, Drama)
+1. PK	 (Comedies, Dramas, International Movies)
+2.	Dil Dhadakne Do (Comedies, Dramas, International Movies)
+3.	Dil Chahta Hai	(Comedies, Dramas, International Movies
+4.	Rang De Basanti (Dramas, International Movies)
+5.	Singapore (Comedies, Dramas, International Movies)
 
 ### Cluster Characteristics
 
@@ -313,15 +280,7 @@ netflix-clustering/
 ---
 
 ## 🚀 Future Enhancements
-
-### Short-term:
-- [ ] Implement optimal cluster number selection (Elbow method)
-- [ ] Add t-SNE/UMAP visualizations for cluster interpretation
-- [ ] Enhance error handling and input validation
-- [ ] Add export functionality for recommendations
-- [ ] Improve Streamlit UI with filters and advanced search
-
-### Medium-term:
+### Med-term:
 - [ ] Implement hybrid recommendation (content + collaborative filtering)
 - [ ] Add A/B testing framework for different models
 - [ ] Deploy on cloud platform (Heroku, AWS, or GCP)
@@ -364,20 +323,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-**Your Name** - [your.email@example.com](mailto:your.email@example.com)
+**Your Name** - [Vishesh Aggarwal](mailto:aggarwalvishesh0@gmail.com)
 
-**LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
+**LinkedIn**: https://linkedin.com/in/vishesh-aggarwal-14v
 
-**Project Link**: [https://github.com/yourusername/netflix-clustering](https://github.com/yourusername/netflix-clustering)
-
----
-
-## 🙏 Acknowledgments
-
-- Netflix for providing the dataset
-- Sentence-Transformers team for the pre-trained models
-- Scikit-learn community for comprehensive ML tools
-- Streamlit for the awesome web framework
 
 ---
 
@@ -393,7 +342,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ If you found this project helpful, please consider giving it a star! ⭐**
 
-Made with ❤️ for Data Science
-
 </div>
-# Netflix-Content-Recommender
